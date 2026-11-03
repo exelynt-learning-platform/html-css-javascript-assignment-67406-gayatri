@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Recipe Card</title>
+
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f1ea;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 30px 15px;
+        }
+
+        /* Recipe Card */
+        .recipe-card {
+            width: 100%;
+            max-width: 550px;
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Recipe Image */
+        .recipe-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Recipe Content */
+        .recipe-content {
+            padding: 30px;
+        }
+
+        .category {
+            color: #e67e22;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin: 12px 0;
+            color: #253528;
+        }
+
+        .description {
+            color: #777;
+            line-height: 1.7;
+            margin-bottom: 22px;
+        }
+
+        /* Recipe Information */
+        .recipe-info {
+            display: flex;
+            justify-content: space-between;
+            background-color: #fff6ec;
+            padding: 18px 12px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .recipe-info div {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .recipe-info strong {
+            color: #d96b20;
+            font-size: 16px;
+        }
+
+        .recipe-info span {
+            font-size: 12px;
+            color: #777;
+        }
+
+        /* Section Headings */
+        h2 {
+            font-size: 21px;
+            color: #253528;
+            margin: 22px 0 14px;
+        }
+
+        /* Ingredients */
+        .ingredients,
+        .instructions {
+            padding-left: 22px;
+            line-height: 2;
+            color: #555;
+        }
+
+        .ingredients li::marker {
+            color: #e67e22;
+        }
+
+        .instructions li {
+            padding-left: 5px;
+        }
+
+        /* Button */
+        .recipe-button {
+            width: 100%;
+            background-color: #e67e22;
+            color: white;
+            border: none;
+            padding: 14px;
+            margin-top: 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .recipe-button:hover {
+            background-color: #c45c10;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .recipe-content {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            .recipe-image {
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="recipe-card">
+
+        <img
+            src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=800"
+            alt="Delicious creamy pasta"
+            class="recipe-image"
+        >
+
+        <div class="recipe-content">
+
+            <span class="category">ITALIAN CUISINE</span>
+
+            <h1>Creamy Garlic Pasta</h1>
+
+            <p class="description">
+                A delicious and creamy garlic pasta recipe
+                that is easy to prepare and perfect for dinner.
+            </p>
+
+            <div class="recipe-info">
+
+                <div>
+                    <strong>20 min</strong>
+                    <span>Prep Time</span>
+                </div>
+
+                <div>
+                    <strong>15 min</strong>
+                    <span>Cook Time</span>
+                </div>
+
+                <div>
+                    <strong>2</strong>
+                    <span>Servings</span>
+                </div>
+
+            </div>
+
+            <h2>Ingredients</h2>
+
+            <ul class="ingredients">
+                <li>200g pasta</li>
+                <li>3 garlic cloves</li>
+                <li>2 tablespoons butter</li>
+                <li>1 cup fresh cream</li>
+                <li>1/2 cup grated cheese</li>
+                <li>Salt and black pepper</li>
+            </ul>
+
+            <h2>Instructions</h2>
+
+            <ol class="instructions">
+                <li>Boil pasta in salted water until cooked.</li>
+                <li>Melt butter in a pan and add chopped garlic.</li>
+                <li>Add fresh cream, cheese, salt and pepper.</li>
+                <li>Mix the cooked pasta with the creamy sauce.</li>
+                <li>Serve hot and enjoy your delicious pasta!</li>
+            </ol>
+
+            <button class="recipe-button" type="button">
+                Enjoy Your Meal!
+            </button>
+
+        </div>
+    </div>
+
+</body>
+</html>
