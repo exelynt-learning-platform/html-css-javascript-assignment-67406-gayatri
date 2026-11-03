@@ -18,6 +18,8 @@
     --white: #ffffff;
     --border: #eee7dc;
     --light-orange: #fff2e6;
+    --spicy-background: #fff0e8;
+    --spicy-color: #c0392b;
 }
 
 body {
@@ -100,7 +102,7 @@ body {
 .recipe-image-container {
     position: relative;
     min-height: 100%;
-    background: linear-gradient(135deg, #e8c9a8, #f7eee1);
+    background-color: #e8c9a8;
     overflow: hidden;
 }
 
@@ -230,7 +232,7 @@ body {
 }
 
 /* =====================================
-   9. INGREDIENTS
+   9. INGREDIENTS LIST
 ===================================== */
 
 .ingredients {
@@ -238,6 +240,12 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
+
+    /* Required ingredient list padding and border */
+    padding: 15px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background-color: #fffdf9;
 }
 
 .ingredients li {
@@ -265,7 +273,24 @@ body {
 }
 
 /* =====================================
-   10. COOKING INSTRUCTIONS
+   10. SPICY INGREDIENT STYLING
+===================================== */
+
+.spicy {
+    background-color: var(--spicy-background);
+    color: var(--spicy-color);
+    border-left: 3px solid var(--spicy-color);
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.spicy label {
+    color: var(--spicy-color);
+}
+
+/* =====================================
+   11. COOKING INSTRUCTIONS
 ===================================== */
 
 .instructions {
@@ -298,7 +323,7 @@ body {
 }
 
 /* =====================================
-   11. CHEF TIPS
+   12. CHEF'S TIPS
 ===================================== */
 
 .tips {
@@ -320,7 +345,7 @@ body {
 }
 
 /* =====================================
-   12. FOOTER
+   13. FOOTER
 ===================================== */
 
 .footer {
@@ -330,7 +355,7 @@ body {
 }
 
 /* =====================================
-   13. RESPONSIVE DESIGN
+   14. RESPONSIVE DESIGN
 ===================================== */
 
 @media (max-width: 768px) {
