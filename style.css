@@ -1,0 +1,244 @@
+
+/* ==============================
+   GLOBAL STYLES
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #e84b70;
+    --primary-dark: #ce3158;
+    --background: #f5f6fc;
+    --heading: #24243a;
+    --text: #77778a;
+    --white: #ffffff;
+    --border: #eeeeF4;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #fce4ec, #e8eafc);
+    color: var(--heading);
+}
+
+/* ==============================
+   PAGE LAYOUT
+============================== */
+
+.page-container {
+    min-height: 100vh;
+    padding: 40px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==============================
+   LIKE CARD
+============================== */
+
+.like-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 30px;
+    background: var(--white);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 45px rgba(40, 40, 80, 0.12);
+}
+
+.card-icon {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #fff0f3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 35px;
+}
+
+.category {
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.like-card h1 {
+    margin: 12px 0;
+    font-size: 32px;
+    color: var(--heading);
+}
+
+.description {
+    max-width: 300px;
+    margin: 0 auto 25px;
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* ==============================
+   LIKE COUNTER
+============================== */
+
+.like-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    margin: 25px 0;
+}
+
+.heart-icon {
+    color: var(--primary);
+    font-size: 30px;
+}
+
+#like-count {
+    color: var(--heading);
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.like-label {
+    color: var(--text);
+    font-size: 14px;
+}
+
+/* ==============================
+   LIKE BUTTON
+============================== */
+
+.like-button {
+    width: 100%;
+    max-width: 220px;
+    padding: 14px 25px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    background: var(--primary);
+    color: var(--white);
+
+    border: none;
+    border-radius: 30px;
+
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: background 0.3s ease,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.like-button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(232, 75, 112, 0.25);
+}
+
+.like-button:focus-visible,
+.reset-button:focus-visible {
+    outline: 3px solid #24243a;
+    outline-offset: 4px;
+}
+
+.button-heart {
+    font-size: 20px;
+}
+
+/* Liked state */
+
+.like-button.liked {
+    background: #292943;
+}
+
+.like-button.liked:hover {
+    background: #41415f;
+}
+
+.like-button.liked .button-heart {
+    color: #ff829e;
+}
+
+/* ==============================
+   STATUS MESSAGE
+============================== */
+
+.like-message {
+    min-height: 24px;
+    margin-top: 18px;
+    color: var(--text);
+    font-size: 13px;
+}
+
+/* ==============================
+   RESET BUTTON
+============================== */
+
+.reset-button {
+    margin-top: 12px;
+    padding: 9px 18px;
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.reset-button:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* ==============================
+   FOOTER
+============================== */
+
+.footer {
+    margin-top: 30px;
+    text-align: center;
+    color: #77778a;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* ==============================
+   MOBILE RESPONSIVENESS
+============================== */
+
+@media (max-width: 480px) {
+
+    .page-container {
+        padding: 25px 15px;
+    }
+
+    .like-card {
+        padding: 35px 20px;
+    }
+
+    .like-card h1 {
+        font-size: 27px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+}
