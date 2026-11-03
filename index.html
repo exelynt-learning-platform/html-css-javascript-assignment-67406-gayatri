@@ -1,0 +1,470 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Welcome to Tiny Cafe. Explore our delicious coffee, snacks, and desserts.">
+
+    <title>Tiny Cafe | Coffee, Snacks & Desserts</title>
+
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript file -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ==============================
+         HEADER
+    =============================== -->
+
+    <header class="header" id="home">
+
+        <div class="header-container">
+
+            <a href="#home" class="logo">
+                ☕ Tiny Cafe
+            </a>
+
+            <nav class="navigation" aria-label="Main navigation">
+                <a href="#home">Home</a>
+                <a href="#menu">Our Menu</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <button
+                type="button"
+                id="theme-toggle"
+                class="theme-button"
+                aria-label="Switch to dark theme"
+                aria-pressed="false"
+            >
+                🌙 Dark Mode
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- ==============================
+             HERO SECTION
+        =============================== -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    FRESH COFFEE · FRESH MOMENTS
+                </span>
+
+                <h1>
+                    Welcome to
+                    <span>Tiny Cafe</span>
+                </h1>
+
+                <p>
+                    A little place with a big love for coffee.
+                    Enjoy freshly brewed coffee, delicious snacks,
+                    and homemade desserts in a cozy atmosphere.
+                </p>
+
+                <a href="#menu" class="primary-button">
+                    Explore Our Menu
+                </a>
+
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=900"
+                    alt="Cozy cafe with coffee and seating"
+                    width="900"
+                    height="650"
+                >
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             ABOUT SECTION
+        =============================== -->
+
+        <section class="about-section" id="about">
+
+            <div class="section-heading">
+
+                <span class="section-label">OUR STORY</span>
+
+                <h2>A Cozy Corner for Everyone</h2>
+
+                <p>
+                    Tiny Cafe is a friendly neighborhood cafe where
+                    every cup is prepared with care and every visit
+                    feels special.
+                </p>
+
+            </div>
+
+            <div class="about-features">
+
+                <article class="about-card">
+                    <span class="feature-icon">☕</span>
+                    <h3>Fresh Coffee</h3>
+                    <p>Freshly brewed coffee made with quality beans.</p>
+                </article>
+
+                <article class="about-card">
+                    <span class="feature-icon">🥐</span>
+                    <h3>Fresh Snacks</h3>
+                    <p>Delicious snacks prepared for your daily cravings.</p>
+                </article>
+
+                <article class="about-card">
+                    <span class="feature-icon">❤️</span>
+                    <h3>Made with Love</h3>
+                    <p>Every order is prepared with care and attention.</p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             MENU SECTION
+        =============================== -->
+
+        <section class="menu-section" id="menu">
+
+            <div class="section-heading">
+
+                <span class="section-label">TASTY & FRESH</span>
+
+                <h2>Explore Our Menu</h2>
+
+                <p>
+                    From your favorite coffee to delicious desserts,
+                    find something special for every moment.
+                </p>
+
+            </div>
+
+
+            <!-- FLEXBOX MENU CARDS -->
+
+            <div class="menu-container">
+
+
+                <!-- COFFEE CARD -->
+
+                <article class="menu-card">
+
+                    <div class="menu-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=700"
+                            alt="Freshly brewed cappuccino"
+                            width="700"
+                            height="450"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="menu-content">
+
+                        <span class="menu-category">OUR SPECIALTY</span>
+
+                        <h3>Hot Coffee</h3>
+
+                        <p>
+                            Rich, aromatic coffee made with freshly
+                            ground coffee beans.
+                        </p>
+
+                        <ul class="menu-list">
+                            <li>
+                                <span>Espresso</span>
+                                <strong>₹80</strong>
+                            </li>
+
+                            <li>
+                                <span>Cappuccino</span>
+                                <strong>₹120</strong>
+                            </li>
+
+                            <li>
+                                <span>Cafe Latte</span>
+                                <strong>₹140</strong>
+                            </li>
+
+                            <li>
+                                <span>Americano</span>
+                                <strong>₹100</strong>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </article>
+
+
+                <!-- COLD DRINKS CARD -->
+
+                <article class="menu-card">
+
+                    <div class="menu-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=700"
+                            alt="Iced coffee drink"
+                            width="700"
+                            height="450"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="menu-content">
+
+                        <span class="menu-category">COOL & REFRESHING</span>
+
+                        <h3>Cold Beverages</h3>
+
+                        <p>
+                            Refresh yourself with our chilled and
+                            refreshing beverages.
+                        </p>
+
+                        <ul class="menu-list">
+                            <li>
+                                <span>Cold Coffee</span>
+                                <strong>₹150</strong>
+                            </li>
+
+                            <li>
+                                <span>Iced Latte</span>
+                                <strong>₹160</strong>
+                            </li>
+
+                            <li>
+                                <span>Chocolate Shake</span>
+                                <strong>₹130</strong>
+                            </li>
+
+                            <li>
+                                <span>Fresh Lemonade</span>
+                                <strong>₹90</strong>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SNACKS CARD -->
+
+                <article class="menu-card">
+
+                    <div class="menu-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=700"
+                            alt="Fresh sandwich"
+                            width="700"
+                            height="450"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="menu-content">
+
+                        <span class="menu-category">FRESHLY PREPARED</span>
+
+                        <h3>Snacks</h3>
+
+                        <p>
+                            Enjoy delicious and freshly prepared
+                            cafe snacks.
+                        </p>
+
+                        <ul class="menu-list">
+                            <li>
+                                <span>Veg Sandwich</span>
+                                <strong>₹100</strong>
+                            </li>
+
+                            <li>
+                                <span>Cheese Sandwich</span>
+                                <strong>₹130</strong>
+                            </li>
+
+                            <li>
+                                <span>French Fries</span>
+                                <strong>₹110</strong>
+                            </li>
+
+                            <li>
+                                <span>Garlic Bread</span>
+                                <strong>₹120</strong>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </article>
+
+
+                <!-- DESSERTS CARD -->
+
+                <article class="menu-card">
+
+                    <div class="menu-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=700"
+                            alt="Chocolate cake dessert"
+                            width="700"
+                            height="450"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="menu-content">
+
+                        <span class="menu-category">SWEET MOMENTS</span>
+
+                        <h3>Desserts</h3>
+
+                        <p>
+                            Complete your cafe experience with
+                            our delicious desserts.
+                        </p>
+
+                        <ul class="menu-list">
+                            <li>
+                                <span>Chocolate Cake</span>
+                                <strong>₹150</strong>
+                            </li>
+
+                            <li>
+                                <span>Brownie</span>
+                                <strong>₹120</strong>
+                            </li>
+
+                            <li>
+                                <span>Blueberry Muffin</span>
+                                <strong>₹100</strong>
+                            </li>
+
+                            <li>
+                                <span>Cheesecake</span>
+                                <strong>₹180</strong>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             SPECIAL OFFER
+        =============================== -->
+
+        <section class="offer-section">
+
+            <div class="offer-content">
+
+                <span>THIS WEEK'S SPECIAL</span>
+
+                <h2>Make Your Coffee Break Special!</h2>
+
+                <p>
+                    Visit Tiny Cafe and enjoy your favorite
+                    coffee with a delicious snack.
+                </p>
+
+                <a href="#contact" class="offer-button">
+                    Visit Us Today
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             CONTACT SECTION
+        =============================== -->
+
+        <section class="contact-section" id="contact">
+
+            <div class="section-heading">
+
+                <span class="section-label">COME SAY HELLO</span>
+
+                <h2>Visit Tiny Cafe</h2>
+
+                <p>
+                    We would love to welcome you.
+                    Stop by for a fresh cup of coffee!
+                </p>
+
+            </div>
+
+            <div class="contact-details">
+
+                <p>📍 Address: Main Street, Pune, Maharashtra</p>
+
+                <p>📞 Phone: +91 98765 43210</p>
+
+                <p>✉️ Email: hello@tinycafe.example</p>
+
+                <p>🕒 Opening Hours: 9:00 AM - 9:00 PM</p>
+
+            </div>
+
+            <a
+                href="mailto:hello@tinycafe.example"
+                class="contact-link"
+            >
+                Contact Us
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==============================
+         FOOTER
+    =============================== -->
+
+    <footer class="footer">
+
+        <a href="#home" class="footer-logo">☕ Tiny Cafe</a>
+
+        <p>
+            Fresh Coffee. Fresh Moments. Made with Love.
+        </p>
+
+        <p>
+            © 2026 Tiny Cafe. All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
