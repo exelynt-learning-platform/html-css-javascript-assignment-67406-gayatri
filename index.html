@@ -4,489 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creamy garlic pasta recipe with ingredients and cooking instructions.">
 
-    <meta name="description" content="A beautifully styled recipe card for creamy garlic pasta.">
+    <title>Creamy Garlic Pasta | RecipeBook</title>
 
-    <title>Delicious Recipe | Creamy Garlic Pasta</title>
-
-    <style>
-        /* =========================
-           1. GLOBAL STYLES
-        ========================== */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #d97735;
-            --primary-dark: #ad5120;
-            --background: #f8f5ef;
-            --heading: #26352c;
-            --text: #666666;
-            --white: #ffffff;
-            --border: #eee7dc;
-            --light-orange: #fff2e6;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: var(--background);
-            color: var(--text);
-            line-height: 1.7;
-        }
-
-        button,
-        input {
-            font: inherit;
-        }
-
-        /* =========================
-           2. HEADER
-        ========================== */
-
-        .header {
-            background: var(--white);
-            padding: 20px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .logo {
-            color: var(--primary);
-            font-size: 25px;
-            font-weight: bold;
-        }
-
-        .header-text {
-            color: var(--heading);
-            font-size: 14px;
-        }
-
-        /* =========================
-           3. MAIN CONTAINER
-        ========================== */
-
-        .container {
-            max-width: 1100px;
-            margin: 45px auto;
-            padding: 0 20px;
-        }
-
-        .page-heading {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .page-heading h1 {
-            color: var(--heading);
-            font-size: 34px;
-            margin-bottom: 8px;
-        }
-
-        .page-heading p {
-            color: var(--text);
-            font-size: 15px;
-        }
-
-        /* =========================
-           4. RECIPE CARD
-        ========================== */
-
-        .recipe-card {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            background: var(--white);
-            border-radius: 18px;
-            overflow: hidden;
-            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
-        }
-
-        .recipe-image-container {
-            position: relative;
-            min-height: 100%;
-            overflow: hidden;
-        }
-
-        .recipe-image {
-            width: 100%;
-            height: 100%;
-            min-height: 480px;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.4s ease;
-        }
-
-        .recipe-image-container:hover .recipe-image {
-            transform: scale(1.05);
-        }
-
-        .image-label {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: var(--white);
-            color: var(--primary);
-            padding: 7px 15px;
-            border-radius: 30px;
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        .recipe-content {
-            padding: 35px;
-        }
-
-        .category {
-            color: var(--primary);
-            font-size: 12px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .recipe-title {
-            color: var(--heading);
-            font-size: 32px;
-            line-height: 1.3;
-            margin: 12px 0;
-        }
-
-        .recipe-description {
-            font-size: 14px;
-            color: var(--text);
-            margin-bottom: 20px;
-        }
-
-        /* =========================
-           5. RECIPE RATINGS
-        ========================== */
-
-        .rating {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 22px;
-            font-size: 14px;
-        }
-
-        .stars {
-            color: #f3a623;
-            letter-spacing: 2px;
-        }
-
-        .rating-text {
-            color: var(--text);
-        }
-
-        /* =========================
-           6. RECIPE INFORMATION
-        ========================== */
-
-        .recipe-info {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin-bottom: 25px;
-        }
-
-        .info-box {
-            background: var(--light-orange);
-            text-align: center;
-            padding: 15px 5px;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .info-box:hover {
-            transform: translateY(-4px);
-        }
-
-        .info-icon {
-            display: block;
-            font-size: 23px;
-            margin-bottom: 5px;
-        }
-
-        .info-box strong {
-            display: block;
-            color: var(--heading);
-            font-size: 14px;
-        }
-
-        .info-box span:last-child {
-            font-size: 11px;
-            color: var(--text);
-        }
-
-        /* =========================
-           7. INGREDIENTS
-        ========================== */
-
-        .section-title {
-            color: var(--heading);
-            font-size: 22px;
-            margin-bottom: 15px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid var(--border);
-        }
-
-        .ingredients {
-            list-style: none;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-bottom: 30px;
-        }
-
-        .ingredients li {
-            display: flex;
-            align-items: center;
-            gap: 9px;
-            font-size: 13px;
-        }
-
-        .ingredients input {
-            width: 16px;
-            height: 16px;
-            accent-color: var(--primary);
-            cursor: pointer;
-            flex-shrink: 0;
-        }
-
-        .ingredients input:checked + label {
-            text-decoration: line-through;
-            color: #999999;
-        }
-
-        .ingredients label {
-            cursor: pointer;
-        }
-
-        /* =========================
-           8. COOKING INSTRUCTIONS
-        ========================== */
-
-        .instructions {
-            list-style: none;
-            counter-reset: steps;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .instructions li {
-            counter-increment: steps;
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            font-size: 13px;
-        }
-
-        .instructions li::before {
-            content: counter(steps);
-            min-width: 28px;
-            height: 28px;
-            background: var(--light-orange);
-            color: var(--primary);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-        }
-
-        /* =========================
-           9. TIPS SECTION
-        ========================== */
-
-        .tips {
-            background: #f3f7f0;
-            border-left: 4px solid #6b9c58;
-            padding: 15px;
-            margin-top: 25px;
-            border-radius: 5px;
-        }
-
-        .tips h3 {
-            color: #426b36;
-            font-size: 15px;
-            margin-bottom: 5px;
-        }
-
-        .tips p {
-            font-size: 13px;
-            color: #61705b;
-        }
-
-        /* =========================
-           10. BUTTON
-        ========================== */
-
-        .recipe-button {
-            width: 100%;
-            margin-top: 25px;
-            padding: 15px;
-            background: var(--primary);
-            color: var(--white);
-            border: none;
-            border-radius: 8px;
-            font-size: 15px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s ease,
-                        transform 0.3s ease;
-        }
-
-        .recipe-button:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
-        }
-
-        .recipe-button:focus-visible {
-            outline: 3px solid var(--heading);
-            outline-offset: 3px;
-        }
-
-        /* =========================
-           11. FOOTER
-        ========================== */
-
-        .footer {
-            text-align: center;
-            padding: 25px 15px;
-            color: var(--text);
-            font-size: 13px;
-        }
-
-        /* =========================
-           12. RESPONSIVE DESIGN
-        ========================== */
-
-        @media (max-width: 768px) {
-
-            .container {
-                margin: 25px auto;
-            }
-
-            .recipe-card {
-                grid-template-columns: 1fr;
-            }
-
-            .recipe-image {
-                min-height: 300px;
-                max-height: 350px;
-            }
-
-            .recipe-content {
-                padding: 25px;
-            }
-
-            .page-heading h1 {
-                font-size: 28px;
-            }
-        }
-
-        @media (max-width: 480px) {
-
-            .header {
-                padding: 15px 5%;
-            }
-
-            .logo {
-                font-size: 21px;
-            }
-
-            .header-text {
-                font-size: 11px;
-            }
-
-            .container {
-                padding: 0 12px;
-            }
-
-            .recipe-content {
-                padding: 20px;
-            }
-
-            .recipe-title {
-                font-size: 27px;
-            }
-
-            .ingredients {
-                grid-template-columns: 1fr;
-            }
-
-            .recipe-info {
-                gap: 6px;
-            }
-
-            .info-box {
-                padding: 12px 3px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="recipe.css">
 </head>
 
 <body>
 
-    <!-- Header -->
     <header class="header">
-        <div class="logo">🍴 RecipeBook</div>
-        <div class="header-text">Simple Recipes, Happy Meals</div>
+        <a href="recipe.html" class="logo">RecipeBook</a>
+        <p>Simple Recipes, Happy Meals</p>
     </header>
 
-    <!-- Main Content -->
     <main class="container">
 
-        <div class="page-heading">
-            <h1>Discover Delicious Recipes</h1>
+        <section class="page-heading">
+            <span class="eyebrow">COOK SOMETHING DELICIOUS</span>
+            <h1>Discover Our Recipe</h1>
             <p>Easy cooking ideas for your everyday meals.</p>
-        </div>
+        </section>
 
-        <!-- Recipe Card -->
         <article class="recipe-card">
 
-            <!-- Recipe Image -->
             <div class="recipe-image-container">
-
                 <img
-                    class="recipe-image"
                     src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=900"
-                    alt="Fresh creamy pasta with vegetables"
+                    alt="Freshly prepared creamy pasta"
+                    class="recipe-image"
+                    width="900"
+                    height="700"
                 >
-
                 <span class="image-label">Chef's Special</span>
-
             </div>
 
-            <!-- Recipe Details -->
             <div class="recipe-content">
 
                 <span class="category">Italian Cuisine</span>
 
-                <h2 class="recipe-title">
-                    Creamy Garlic Pasta
-                </h2>
+                <h2 class="recipe-title">Creamy Garlic Pasta</h2>
 
                 <p class="recipe-description">
-                    Enjoy this delicious homemade creamy garlic pasta.
-                    Made with fresh ingredients, cheese, garlic and cream,
-                    this recipe is perfect for lunch or dinner.
+                    Enjoy delicious homemade creamy garlic pasta,
+                    prepared with fresh ingredients, garlic, cheese
+                    and cream. Perfect for lunch or dinner.
                 </p>
 
-                <!-- Rating -->
                 <div class="rating">
-                    <span class="stars">★★★★★</span>
-                    <span class="rating-text">5.0 (Easy Recipe)</span>
+                    <span class="stars" aria-label="5 out of 5 stars">
+                        ★★★★★
+                    </span>
+                    <span>5.0 | Easy Recipe</span>
                 </div>
 
-                <!-- Recipe Information -->
-                <div class="recipe-info">
+                <section class="recipe-info" aria-label="Recipe details">
 
                     <div class="info-box">
                         <span class="info-icon">⏱️</span>
@@ -506,58 +78,56 @@
                         <span>Servings</span>
                     </div>
 
-                </div>
+                </section>
 
-                <!-- Ingredients -->
-                <section>
+                <section class="recipe-section">
 
                     <h3 class="section-title">Ingredients</h3>
 
                     <ul class="ingredients">
 
                         <li>
-                            <input type="checkbox" id="item1">
-                            <label for="item1">200g pasta</label>
+                            <input type="checkbox" id="ingredient1">
+                            <label for="ingredient1">200g pasta</label>
                         </li>
 
                         <li>
-                            <input type="checkbox" id="item2">
-                            <label for="item2">3 garlic cloves</label>
+                            <input type="checkbox" id="ingredient2">
+                            <label for="ingredient2">3 garlic cloves</label>
                         </li>
 
                         <li>
-                            <input type="checkbox" id="item3">
-                            <label for="item3">2 tbsp butter</label>
+                            <input type="checkbox" id="ingredient3">
+                            <label for="ingredient3">2 tbsp butter</label>
                         </li>
 
                         <li>
-                            <input type="checkbox" id="item4">
-                            <label for="item4">1 cup fresh cream</label>
+                            <input type="checkbox" id="ingredient4">
+                            <label for="ingredient4">1 cup fresh cream</label>
                         </li>
 
                         <li>
-                            <input type="checkbox" id="item5">
-                            <label for="item5">1/2 cup cheese</label>
+                            <input type="checkbox" id="ingredient5">
+                            <label for="ingredient5">1/2 cup grated cheese</label>
                         </li>
 
                         <li>
-                            <input type="checkbox" id="item6">
-                            <label for="item6">Salt and pepper</label>
+                            <input type="checkbox" id="ingredient6">
+                            <label for="ingredient6">Salt and black pepper</label>
                         </li>
 
                     </ul>
 
                 </section>
 
-                <!-- Instructions -->
-                <section>
+                <section class="recipe-section">
 
                     <h3 class="section-title">Cooking Instructions</h3>
 
                     <ol class="instructions">
 
                         <li>
-                            Boil pasta in salted water until it becomes soft.
+                            Boil pasta in salted water until soft.
                         </li>
 
                         <li>
@@ -565,41 +135,28 @@
                         </li>
 
                         <li>
-                            Add fresh cream, cheese, salt and black pepper.
+                            Add fresh cream, cheese, salt and pepper.
                         </li>
 
                         <li>
-                            Mix the boiled pasta with the creamy sauce.
+                            Mix the cooked pasta with the creamy sauce.
                         </li>
 
                         <li>
-                            Cook for another two minutes and serve hot.
+                            Cook for two minutes and serve hot.
                         </li>
 
                     </ol>
 
                 </section>
 
-                <!-- Cooking Tip -->
-                <div class="tips">
-
+                <aside class="tips">
                     <h3>💡 Chef's Tip</h3>
-
                     <p>
                         Add fresh herbs and extra cheese before serving
                         for a richer and more delicious taste.
                     </p>
-
-                </div>
-
-                <!-- Button -->
-                <button
-                    class="recipe-button"
-                    type="button"
-                    onclick="window.print()"
-                >
-                    Print Recipe 🖨️
-                </button>
+                </aside>
 
             </div>
 
@@ -607,9 +164,8 @@
 
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <p>© 2026 RecipeBook | Made with ❤️ for Food Lovers</p>
+        <p>© 2026 RecipeBook | Made with love for food lovers.</p>
     </footer>
 
 </body>
