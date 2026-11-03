@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="An interactive Like Button project using JavaScript.">
+
+    <title>Like Button | JavaScript Clicks</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="page-container">
+
+        <section class="like-card">
+
+            <div class="card-icon">❤️</div>
+
+            <span class="category">JAVASCRIPT INTERACTION</span>
+
+            <h1>Like Button</h1>
+
+            <p class="description">
+                Enjoying this project? Click the button below
+                to show your appreciation!
+            </p>
+
+            <div class="like-display">
+                <span class="heart-icon" aria-hidden="true">♥</span>
+
+                <span id="like-count" aria-live="polite">0</span>
+
+                <span class="like-label">Likes</span>
+            </div>
+
+            <button
+                type="button"
+                id="like-button"
+                class="like-button"
+                aria-pressed="false"
+            >
+                <span class="button-heart" aria-hidden="true">♥</span>
+                <span id="button-text">Like</span>
+            </button>
+
+            <p id="like-message" class="like-message" aria-live="polite">
+                Be the first to like this!
+            </p>
+
+            <button
+                type="button"
+                id="reset-button"
+                class="reset-button"
+            >
+                Reset Likes
+            </button>
+
+        </section>
+
+        <footer class="footer">
+            <p>Built with HTML, CSS and JavaScript</p>
+            <p>JavaScript Clicks & GitHub Pages Assignment</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
